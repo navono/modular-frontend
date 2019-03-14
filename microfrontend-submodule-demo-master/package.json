@@ -5,6 +5,20 @@
   "bin": {
     "lotus-scaffold-micro-antd-sub": "_lotus/bin/index.js"
   },
+  "scripts": {
+    "start": " node scripts/mock.js ",
+    "dev": "cross-env BUILD_ENV=dev node scripts/start.js",
+    "dev:micro": "cross-env DEV_ENV=micro node scripts/start.js",
+    "build": "node scripts/build.js",
+    "build:micro": "node scripts/build.micro.js",
+    "build:pre": "cross-env BUILD_ENV=pre node scripts/build.micro.js",
+    "build:prod": "cross-env BUILD_ENV=prod node scripts/build.micro.js",
+    "deploy": "cross-env BUILD_ENV=dev node scripts/deploy.js",
+    "deploy:test": "cross-env BUILD_ENV=test node scripts/deploy.js",
+    "deploy:pre": "cross-env BUILD_ENV=pre node scripts/deploy.js",
+    "deploy:prod": "cross-env BUILD_ENV=prod node scripts/deploy.js",
+    "test": "node scripts/test.js --env=jsdom"
+  },
   "dependencies": {
     "antd": "^3.4.3",
     "autoprefixer": "7.1.6",
@@ -86,20 +100,6 @@
     "webpack-sftp-client": "^1.2.1",
     "whatwg-fetch": "2.0.3",
     "xss": "^1.0.3"
-  },
-  "scripts": {
-    "start": " node scripts/mock.js ",
-    "dev": "cross-env BUILD_ENV=dev node scripts/start.js",
-    "dev:micro": "cross-env DEV_ENV=micro node scripts/start.js",
-    "build": "node scripts/build.js",
-    "build:micro": "node scripts/build.micro.js",
-    "build:pre": "cross-env BUILD_ENV=pre node scripts/build.micro.js",
-    "build:prod": "cross-env BUILD_ENV=prod node scripts/build.micro.js",
-    "deploy": "cross-env BUILD_ENV=dev node scripts/deploy.js",
-    "deploy:test": "cross-env BUILD_ENV=test node scripts/deploy.js",
-    "deploy:pre": "cross-env BUILD_ENV=pre node scripts/deploy.js",
-    "deploy:prod": "cross-env BUILD_ENV=prod node scripts/deploy.js",
-    "test": "node scripts/test.js --env=jsdom"
   },
   "jest": {
     "collectCoverageFrom": [
