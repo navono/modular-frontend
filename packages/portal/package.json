@@ -1,10 +1,10 @@
 {
-  "name": "lotus-scaffold-micro-frontend-portal",
+  "name": "portal",
   "version": "0.0.5",
   "description": "Portal app that builds the foundation of multiple SPAs",
   "scripts": {
-    "watch": "webpack-dev-server --port 9000",
-    "build:micro": "webpack -p --progress"
+    "serve": "webpack-dev-server --port 9000",
+    "build:prod": "webpack -p --progress"
   },
   "license": "MIT",
   "devDependencies": {},
@@ -33,7 +33,7 @@
     "webpack-dev-server": "^2.11.1"
   },
   "bin": {
-    "lotus-scaffold-micro-frontend-portal": "_lotus/bin/index.js"
+    "portal": "_lotus/bin/index.js"
   },
-  "scaffold": "lotus-scaffold-micro-frontend-portal"
+  "scaffold": "portal"
 }

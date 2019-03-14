@@ -8,6 +8,7 @@
     "bootstrap": "lerna bootstrap",
     "watch:portal": "lerna run watch:portal --stream --concurrency 6",
     "portal": "lerna run serve --stream",
+    "build": "lerna run build:prod --stream --concurrency 6",
     "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
   },
   "devDependencies": {
