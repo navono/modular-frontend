@@ -1,5 +1,5 @@
 {
-  "name": "microfrontend-base-demo",
+  "name": "basemodule",
   "scaffold": "lotus-scaffold-micro-antd",
   "version": "0.0.3",
   "bin": {

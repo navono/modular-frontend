@@ -1,5 +1,5 @@
 {
-  "name": "microfrontend-submodule-demo",
+  "name": "submodule",
   "scaffold": "lotus-scaffold-micro-antd-sub",
   "version": "0.0.2",
   "bin": {
@@ -147,11 +147,11 @@
     "extends": "react-app"
   },
   "registerConfig": {
-    "name": "microfrontend-submodule-demo",
+    "name": "submodule",
     "path": "/project",
-    "prefix": "/microfrontend-submodule-demo/",
-    "main": "/microfrontend-submodule-demo/main.js",
-    "store": "/microfrontend-submodule-demo/store.js"
+    "prefix": "/submodule/",
+    "main": "/submodule/main.js",
+    "store": "/submodule/store.js"
   },
   "theme": "./src/theme.js",
   "_from": "lotus-scaffold-micro-antd-sub@0.0.2",

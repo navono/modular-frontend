@@ -1,7 +1,7 @@
 {
-  "name": "microfrontend-submodule-demo",
+  "name": "submodule",
   "path": ["/module1"],
-  "prefix": "/microfrontend-submodule-demo/",
-  "main": "/microfrontend-submodule-demo/main.js",
-  "store": "/microfrontend-submodule-demo/store.js"
+  "prefix": "/submodule/",
+  "main": "/submodule/main.js",
+  "store": "/submodule/store.js"
 }
