@@ -1,9 +1,8 @@
 {
   "name": "modular-frontend",
-  "private": true,
   "version": "0.1.0",
   "main": "index.js",
-  "author": "pingqixing <pingqixing@supcon.com>",
+  "license": "MIT",
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "watch:portal": "lerna run watch:portal --stream --concurrency 6",
