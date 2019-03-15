@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
+  "private": true,
+  "workspaces": ["packages/*"],
   "scripts": {
-    "bootstrap": "lerna bootstrap",
-    "watch:portal": "lerna run watch:portal --stream --concurrency 6",
+    "bootstrap": "lerna bootstrap --concurrency 4",
+    "watch:portal": "lerna run watch:portal --stream --concurrency 4",
     "portal": "lerna run serve --stream",
-    "build": "lerna run build:prod --stream --concurrency 6",
+    "build": "lerna run build:prod --stream --concurrency 4",
     "update-version": "lerna publish --skip-git --skip-npm --force-publish '*'"
   },
   "devDependencies": {
