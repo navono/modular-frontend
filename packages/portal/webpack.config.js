@@ -1,7 +1,5 @@
 const path = require('path');
-const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -38,10 +36,15 @@ module.exports = {
 	plugins: [
 		CopyWebpackPlugin([
 			{from: path.resolve(__dirname, 'src/index.html')},
+			{from: path.resolve(__dirname, 'src/project.config.js'), to: path.resolve(__dirname, '../../build')},
 		]),
 		new CleanWebpackPlugin()
 	],
 	devtool: 'source-map',
 	externals: [
-	]
+	],
+	devServer: {
+    contentBase: path.join(__dirname, '../../build'),
+    compress: true,
+  }
 };
