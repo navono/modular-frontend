@@ -9,7 +9,7 @@ async function bootstrap() {
         registerApp({
             name: element.name,
             main: element.main,
-            url: element.prefix,
+            prefix: element.prefix,
             store:element.store,
             base: element.base,
             path: element.path

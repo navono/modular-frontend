@@ -18,7 +18,7 @@ export function hashPrefix(app) {
             });
         }
         // 普通情况
-        else if(location.hash.startsWith(`#${app.path || app.url}`)){
+        else if(location.hash.startsWith(`#${app.path || app.prefix}`)){
             isShow = true
         }
         return isShow;
@@ -38,7 +38,7 @@ export function pathPrefix(app) {
             });
         }
         // 普通情况
-        else if(location.pathname.indexOf(`${app.path || app.url}`) === 0){
+        else if(location.pathname.indexOf(`${app.path || app.prefix}`) === 0){
             isShow = true
         }
         return isShow;
