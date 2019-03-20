@@ -2,6 +2,8 @@ const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const outPath = path.resolve(__dirname, '../../', 'build');
+
 module.exports = {
 	entry: {
 		main: 'src/Bootstrap.js',
@@ -10,8 +12,8 @@ module.exports = {
 		publicPath: '',
 		// filename: 'Bootstrap.[hash:5].js',
 		filename: 'Bootstrap.js',
-		path: path.resolve(__dirname, '../../', 'build'),
-	},  
+		path: outPath,
+	},
 	module: {
 		rules: [
 			{
@@ -36,7 +38,7 @@ module.exports = {
 	plugins: [
 		CopyWebpackPlugin([
 			{from: path.resolve(__dirname, 'src/index.html')},
-			{from: path.resolve(__dirname, 'src/project.config.js'), to: path.resolve(__dirname, '../../build')},
+			{from: path.resolve(__dirname, 'src/project.config.js'), to: outPath},
 		]),
 		new CleanWebpackPlugin()
 	],
@@ -44,7 +46,7 @@ module.exports = {
 	externals: [
 	],
 	devServer: {
-    contentBase: path.join(__dirname, '../../build'),
+    contentBase: outPath,
     compress: true,
   }
 };
