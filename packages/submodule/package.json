@@ -9,6 +9,7 @@
     "start": " node scripts/mock.js ",
     "dev": "cross-env BUILD_ENV=dev node scripts/start.js",
     "dev:micro": "cross-env DEV_ENV=micro node scripts/start.js",
+    "watch:portal": "cross-env BUILD_ENV=watch DEV_ENV=micro node scripts/start.js",
     "build": "node scripts/build.js",
     "build:micro": "node scripts/build.micro.js",
     "build:pre": "cross-env BUILD_ENV=pre node scripts/build.micro.js",

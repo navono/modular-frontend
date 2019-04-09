@@ -28,9 +28,6 @@ function getFlatMenuData(menus) {
 
 export const getRouterData = app => {
   let routerConfig = {
-    // '/': {
-    //   component: asyncComponent(() => import('../layouts/BasicLayout.local')),
-    // },
     '/module1/page1': {
       component: asyncComponent(() => import('../routes/page/index'/* webpackChunkName: "page1" */)),
     },

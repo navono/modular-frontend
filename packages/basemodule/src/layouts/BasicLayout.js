@@ -148,11 +148,11 @@ export default class BasicLayout extends React.PureComponent {
       message.success(`清空了${type}`)
     //   this.props.history.push('/user/login')
     };
-     handleMenuClick = async ({ key }) => {
-       if (key === 'logout') {
-         // 点击退出
-       }
-     };
+    handleMenuClick = async ({ key }) => {
+      if (key === 'logout') {
+        // 点击退出
+      }
+    };
     handleNoticeVisibleChange = visible => {
     };
 

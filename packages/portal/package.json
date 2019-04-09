@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "Portal app that builds the foundation of multiple SPAs",
   "scripts": {
-    "serve": "webpack-dev-server --port 9000",
+    "serve": "webpack-dev-server --port 9000 --open",
     "build:prod": "webpack -p --progress"
   },
   "license": "MIT",
