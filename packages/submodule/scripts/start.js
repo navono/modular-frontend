@@ -9,7 +9,7 @@ let config = require('../config/webpack.config.dev')
 let microConfig = require('../config/webpack.config.dev.micro')
 
 if (process.env.DEV_ENV === 'micro') {
-  process.env.NODE_ENV = 'production'
+  // process.env.NODE_ENV = 'production'
   config = microConfig
 }
 // Makes the script crash on unhandled rejections instead of silently
@@ -86,7 +86,6 @@ choosePort(HOST, DEFAULT_PORT)
       proxyConfig,
       urls.lanUrlForConfig
     )
-    console.log(compiler)
     const devServer = new WebpackDevServer(compiler, serverConfig)
     // Launch WebpackDevServer.
     devServer.listen(port, HOST, err => {
